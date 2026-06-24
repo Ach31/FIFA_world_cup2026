@@ -1,0 +1,15 @@
+[2026-06-24T14:08:00.158+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mise_a_jour_donnees.telecharger_donnees manual__2026-06-24T14:07:58.421032+00:00 [queued]>
+[2026-06-24T14:08:00.169+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mise_a_jour_donnees.telecharger_donnees manual__2026-06-24T14:07:58.421032+00:00 [queued]>
+[2026-06-24T14:08:00.170+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2026-06-24T14:08:00.185+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): telecharger_donnees> on 2026-06-24 14:07:58.421032+00:00
+[2026-06-24T14:08:00.193+0000] {standard_task_runner.py:60} INFO - Started process 2590 to run task
+[2026-06-24T14:08:00.197+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mise_a_jour_donnees', 'telecharger_donnees', 'manual__2026-06-24T14:07:58.421032+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/mise_a_jour_donnees.py', '--cfg-path', '/tmp/tmpnqj172kz']
+[2026-06-24T14:08:00.201+0000] {standard_task_runner.py:88} INFO - Job 17: Subtask telecharger_donnees
+[2026-06-24T14:08:00.276+0000] {task_command.py:423} INFO - Running <TaskInstance: mise_a_jour_donnees.telecharger_donnees manual__2026-06-24T14:07:58.421032+00:00 [running]> on host 0bc9ad75814a
+[2026-06-24T14:08:00.553+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mise_a_jour_donnees' AIRFLOW_CTX_TASK_ID='telecharger_donnees' AIRFLOW_CTX_EXECUTION_DATE='2026-06-24T14:07:58.421032+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-24T14:07:58.421032+00:00'
+[2026-06-24T14:08:00.554+0000] {logging_mixin.py:188} INFO - 📥 Téléchargement des données depuis KaggleHub...
+[2026-06-24T14:08:00.990+0000] {logging_mixin.py:188} INFO - ✅ Données sauvegardées dans /opt/***/data/players_updated.csv
+[2026-06-24T14:08:00.991+0000] {python.py:201} INFO - Done. Returned value was: /opt/***/data/players_updated.csv
+[2026-06-24T14:08:01.016+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=mise_a_jour_donnees, task_id=telecharger_donnees, execution_date=20260624T140758, start_date=20260624T140800, end_date=20260624T140801
+[2026-06-24T14:08:01.054+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-06-24T14:08:01.072+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
