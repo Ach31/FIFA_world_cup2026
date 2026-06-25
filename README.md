@@ -72,25 +72,25 @@ Le fichier CSV généré peut être importé dans Power BI pour créer des visua
 
 - **Orchestration** :
 
-- **Apache Airflow 2.8.1** : [Apache Airflow](https://airflow.apache.org/) (pour l'automatisation des workflows).
+  * **Apache Airflow 2.8.1** : [Apache Airflow](https://airflow.apache.org/) (pour l'automatisation des workflows).
 
 - **Backend** :
 
-- **Python 3.9+** : [Python 3.9+](https://www.python.org/) (pour les scripts de traitement).
-- **Pandas** : [Pandas](https://pandas.pydata.org/) (pour la manipulation des données).
-- **KaggleHub** : [KaggleHub](https://github.com/Kaggle/kagglehub) (pour télécharger les datasets depuis Kaggle).
+  * **Python 3.9+** : [Python 3.9+](https://www.python.org/) (pour les scripts de traitement).
+  * **Pandas** : [Pandas](https://pandas.pydata.org/) (pour la manipulation des données).
+  * **KaggleHub** : [KaggleHub](https://github.com/Kaggle/kagglehub) (pour télécharger les datasets depuis Kaggle).
 
 - **Base de données** :
 
-- **PostgreSQL 13** : [PostgreSQL 13](https://www.postgresql.org/) (pour stocker les métadonnées d'Airflow).
+  * **PostgreSQL 13** : [PostgreSQL 13](https://www.postgresql.org/) (pour stocker les métadonnées d'Airflow).
 
 - **Conteneurisation** :
 
-- **Docker** : [Nginx Alpine](https://hub.docker.com/_/nginx) (pour servir l'application)(pour déployer Airflow et PostgreSQL).
+  * **Docker** : [Nginx Alpine](https://hub.docker.com/_/nginx) (pour servir l'application)(pour déployer Airflow et PostgreSQL).
 
 - **Visualisation** :
 
-- **Power BI** : [Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi/) (pour l'analyse et les tableaux de bord).
+  * **Power BI** : [Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi/) (pour l'analyse et les tableaux de bord).
 
 ---
 ## 🤝 Contribuer
