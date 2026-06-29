@@ -59,6 +59,8 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+      airflow-webserver:  # ⚠️ Ajoute cette dépendance pour s'assurer que la BDD est initialisée
+        condition: service_started
     command: >
       bash -c "
       pip install kagglehub pandas &&

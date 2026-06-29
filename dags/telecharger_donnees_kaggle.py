@@ -1,8 +1,11 @@
 import kagglehub
 import pandas as pd
 import os
-
+import logging
 def telecharger_et_sauvegarder_donnees():
+
+    logger = logging.getLogger(__name__)
+
     # 1. Télécharger les données depuis KaggleHub
     print("📥 Téléchargement des données depuis KaggleHub...")
     path = kagglehub.dataset_download("swaptr/fifa-wc-2026-players")
@@ -17,7 +20,11 @@ def telecharger_et_sauvegarder_donnees():
     # 4. Sauvegarder le DataFrame en CSV dans /opt/airflow/data/
     output_path = "/opt/airflow/data/players_updated.csv"
     df.to_csv(output_path, index=False)
-    print(f"✅ Données sauvegardées dans {output_path}")
 
-    # 5. Retourner le chemin du CSV pour les tâches suivantes
+    # 5. ⚠️ Ajoute ce log pour le "DAG Audit Log"
+    logger.info("✅ Les données ont été actualisées et sauvegardées dans %s", output_path)
+
+    # 6. Retourner le chemin du CSV
     return output_path
+
+telecharger_et_sauvegarder_donnees()
